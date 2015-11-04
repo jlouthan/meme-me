@@ -33,10 +33,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.topMemeText.borderStyle = UITextBorderStyle.None
-        self.bottomMemeText.borderStyle = UITextBorderStyle.None
-        self.topMemeText.text = "TOP"
-        self.bottomMemeText.text = "BOTTOM"
+        styleTextViews()
+        
+//        TODO maybe move this into delegate class?
+        self.topMemeText.delegate = self
+        self.bottomMemeText.delegate = self
+    }
+    
+    func styleTextViews() {
         
         let memeTextAttributes = [
             NSStrokeColorAttributeName: UIColor.blackColor(),
@@ -45,14 +49,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             NSStrokeWidthAttributeName: -3.0
         ]
         
-        topMemeText.defaultTextAttributes = memeTextAttributes
-        bottomMemeText.defaultTextAttributes = memeTextAttributes
-        topMemeText.textAlignment = NSTextAlignment.Center
-        bottomMemeText.textAlignment = NSTextAlignment.Center
-        
-//        TODO maybe move this into delegate class?
-        self.topMemeText.delegate = self
-        self.bottomMemeText.delegate = self
+        self.topMemeText.text = "TOP"
+        self.bottomMemeText.text = "BOTTOM"
+        self.topMemeText.defaultTextAttributes = memeTextAttributes
+        self.bottomMemeText.defaultTextAttributes = memeTextAttributes
+        self.topMemeText.borderStyle = UITextBorderStyle.None
+        self.bottomMemeText.borderStyle = UITextBorderStyle.None
+        self.topMemeText.textAlignment = NSTextAlignment.Center
+        self.bottomMemeText.textAlignment = NSTextAlignment.Center
     }
     
     func presentImagePickerWithSourceType(type: UIImagePickerControllerSourceType) {
