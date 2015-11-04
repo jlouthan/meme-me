@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		186A87391BEA84B600C1A51D /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A87381BEA84B600C1A51D /* Meme.swift */; };
 		18A1FB741BE97356002FCAB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1FB731BE97356002FCAB6 /* AppDelegate.swift */; };
 		18A1FB761BE97356002FCAB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1FB751BE97356002FCAB6 /* ViewController.swift */; };
 		18A1FB791BE97356002FCAB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A1FB771BE97356002FCAB6 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		186A87381BEA84B600C1A51D /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Meme.swift; path = ../Meme.swift; sourceTree = "<group>"; };
 		18A1FB701BE97356002FCAB6 /* MemeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A1FB731BE97356002FCAB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A1FB751BE97356002FCAB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		18A1FB721BE97356002FCAB6 /* MemeMe */ = {
 			isa = PBXGroup;
 			children = (
+				186A87381BEA84B600C1A51D /* Meme.swift */,
 				18A1FB731BE97356002FCAB6 /* AppDelegate.swift */,
 				18A1FB751BE97356002FCAB6 /* ViewController.swift */,
 				18A1FB771BE97356002FCAB6 /* Main.storyboard */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186A87391BEA84B600C1A51D /* Meme.swift in Sources */,
 				18A1FB761BE97356002FCAB6 /* ViewController.swift in Sources */,
 				18A1FB741BE97356002FCAB6 /* AppDelegate.swift in Sources */,
 			);
@@ -482,6 +486,7 @@
 				18A1FB9A1BE97357002FCAB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18A1FB9B1BE97357002FCAB6 /* Build configuration list for PBXNativeTarget "MemeMeTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +495,7 @@
 				18A1FB9D1BE97357002FCAB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18A1FB9E1BE97357002FCAB6 /* Build configuration list for PBXNativeTarget "MemeMeUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +504,7 @@
 				18A1FBA01BE97357002FCAB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
