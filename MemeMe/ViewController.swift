@@ -18,6 +18,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var topMemeText: UITextField!
     @IBOutlet weak var bottomMemeText: UITextField!
     
+    @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var toolbar: UIToolbar!
     
     override func viewWillAppear(animated: Bool) {
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
@@ -71,8 +73,29 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         presentImagePickerWithSourceType(UIImagePickerControllerSourceType.Camera)
     }
     
+//    create and share memed image
+    
+    func generateMemedImage() -> UIImage {
+        
+        self.navBar.hidden = true
+        self.toolbar.hidden = true
+        
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
+        let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        self.navBar.hidden = false
+        self.toolbar.hidden = false
+        
+        return memedImage
+    }
+    
     @IBAction func share(sender: AnyObject) {
-        let controller = UIActivityViewController(activityItems: [memeImage.image!], applicationActivities: nil)
+        
+        let memedImage = generateMemedImage()
+        
+        let controller = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
         self.presentViewController(controller, animated: true, completion: nil)
     }
     //    image picker delegate

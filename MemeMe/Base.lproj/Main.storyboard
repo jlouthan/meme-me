@@ -86,7 +86,9 @@
                         <outlet property="bottomMemeText" destination="Vt3-QQ-jnT" id="nSd-Xv-BeR"/>
                         <outlet property="cameraButton" destination="q5X-b4-zmT" id="04b-yp-OwZ"/>
                         <outlet property="memeImage" destination="VSj-zJ-UfJ" id="aET-Nu-vdK"/>
+                        <outlet property="navBar" destination="Vki-Yl-JAz" id="k1d-CQ-SbG"/>
                         <outlet property="shareButton" destination="hGI-hs-4nX" id="dsc-2i-Up6"/>
+                        <outlet property="toolbar" destination="oaQ-0O-ufu" id="qE8-E2-5zf"/>
                         <outlet property="topMemeText" destination="VKT-Ct-2iV" id="UCW-ZJ-iQw"/>
                     </connections>
                 </viewController>
