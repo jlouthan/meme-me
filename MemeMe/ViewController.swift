@@ -72,6 +72,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func share(sender: AnyObject) {
+        let controller = UIActivityViewController(activityItems: [memeImage.image!], applicationActivities: nil)
+        self.presentViewController(controller, animated: true, completion: nil)
     }
     //    image picker delegate
     
