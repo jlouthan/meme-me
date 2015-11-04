@@ -13,14 +13,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var memeImage: UIImageView!
     
     @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
     
     @IBOutlet weak var topMemeText: UITextField!
-    
     @IBOutlet weak var bottomMemeText: UITextField!
     
     
     override func viewWillAppear(animated: Bool) {
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
+        shareButton.enabled = (memeImage.image != nil)
         self.subscribeToKeyboardNotifications()
     }
     
@@ -70,12 +71,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         presentImagePickerWithSourceType(UIImagePickerControllerSourceType.Camera)
     }
     
+    @IBAction func share(sender: AnyObject) {
+    }
     //    image picker delegate
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         self.dismissViewControllerAnimated(true, completion: nil)
         if let newImage = info["UIImagePickerControllerOriginalImage"] {
             self.memeImage.image = newImage as? UIImage
+            self.shareButton.enabled = true
         }
     }
     

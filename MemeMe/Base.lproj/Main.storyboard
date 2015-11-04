@@ -38,14 +38,27 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VKT-Ct-2iV">
-                                <rect key="frame" x="0.0" y="50" width="600" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vt3-QQ-jnT">
+                                <rect key="frame" x="0.0" y="496" width="600" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vt3-QQ-jnT">
-                                <rect key="frame" x="0.0" y="496" width="600" height="30"/>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vki-Yl-JAz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Title" id="6bb-ku-VpR">
+                                        <barButtonItem key="leftBarButtonItem" title="Share" id="hGI-hs-4nX">
+                                            <connections>
+                                                <action selector="share:" destination="BYZ-38-t0r" id="80u-YL-4pM"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VKT-Ct-2iV">
+                                <rect key="frame" x="0.0" y="72" width="600" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -57,7 +70,6 @@
                             <constraint firstItem="oaQ-0O-ufu" firstAttribute="top" secondItem="VSj-zJ-UfJ" secondAttribute="bottom" id="0ht-3c-0k4"/>
                             <constraint firstItem="VSj-zJ-UfJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="6lT-Ob-IGx"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oaQ-0O-ufu" secondAttribute="bottom" id="Ftc-rN-93j"/>
-                            <constraint firstItem="VSj-zJ-UfJ" firstAttribute="top" secondItem="VKT-Ct-2iV" secondAttribute="bottom" constant="-60" id="Gzb-ak-tdJ"/>
                             <constraint firstItem="oaQ-0O-ufu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="VcQ-HQ-7QL"/>
                             <constraint firstItem="VKT-Ct-2iV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Xs5-sC-cNH"/>
                             <constraint firstItem="VSj-zJ-UfJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fTc-3f-HPJ"/>
@@ -65,6 +77,7 @@
                             <constraint firstItem="Vt3-QQ-jnT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="i8x-HR-Ond"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VKT-Ct-2iV" secondAttribute="trailing" constant="-20" id="j5p-dZ-qXT"/>
                             <constraint firstItem="Vt3-QQ-jnT" firstAttribute="top" secondItem="VSj-zJ-UfJ" secondAttribute="bottom" constant="-60" id="kDl-jW-Bff"/>
+                            <constraint firstItem="VSj-zJ-UfJ" firstAttribute="top" secondItem="VKT-Ct-2iV" secondAttribute="bottom" constant="-82" id="p0z-jm-J7I"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Vt3-QQ-jnT" secondAttribute="trailing" constant="-20" id="uSn-3F-WRT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oaQ-0O-ufu" secondAttribute="trailing" constant="-20" id="wX6-Ux-ssK"/>
                         </constraints>
@@ -73,6 +86,7 @@
                         <outlet property="bottomMemeText" destination="Vt3-QQ-jnT" id="nSd-Xv-BeR"/>
                         <outlet property="cameraButton" destination="q5X-b4-zmT" id="04b-yp-OwZ"/>
                         <outlet property="memeImage" destination="VSj-zJ-UfJ" id="aET-Nu-vdK"/>
+                        <outlet property="shareButton" destination="hGI-hs-4nX" id="dsc-2i-Up6"/>
                         <outlet property="topMemeText" destination="VKT-Ct-2iV" id="UCW-ZJ-iQw"/>
                     </connections>
                 </viewController>
