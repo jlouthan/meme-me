@@ -32,6 +32,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.topMemeText.text = "TOP"
         self.bottomMemeText.text = "BOTTOM"
         
+        let memeTextAttributes = [
+            NSStrokeColorAttributeName: UIColor.blackColor(),
+            NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+            NSStrokeWidthAttributeName: NSNumber(float: 3.0)
+        ]
+        
+        topMemeText.defaultTextAttributes = memeTextAttributes
+        bottomMemeText.defaultTextAttributes = memeTextAttributes
+        topMemeText.textAlignment = NSTextAlignment.Center
+        bottomMemeText.textAlignment = NSTextAlignment.Center
+        
 //        TODO maybe move this into delegate class?
         self.topMemeText.delegate = self
         self.bottomMemeText.delegate = self
