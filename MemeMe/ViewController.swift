@@ -33,8 +33,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.topMemeText.backgroundColor = UIColor.clearColor()
-        self.bottomMemeText.backgroundColor = UIColor.clearColor()
         self.topMemeText.borderStyle = UITextBorderStyle.None
         self.bottomMemeText.borderStyle = UITextBorderStyle.None
         self.topMemeText.text = "TOP"
@@ -76,7 +74,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //    create and share memed image
     
     func generateMemedImage() -> UIImage {
-        
         self.navBar.hidden = true
         self.toolbar.hidden = true
         
@@ -91,13 +88,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return memedImage
     }
     
+    func saveMeme(memedImage: UIImage) {
+        let meme = Meme(topText: topMemeText.text!, bottomText: bottomMemeText.text!, image: memeImage.image!, memedImage: memedImage)
+    }
+    
     @IBAction func share(sender: AnyObject) {
         
         let memedImage = generateMemedImage()
-        
         let controller = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
+        
+        controller.completionWithItemsHandler = { activity, success, items, error in
+            self.saveMeme(memedImage)
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
         self.presentViewController(controller, animated: true, completion: nil)
     }
+    
     //    image picker delegate
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
