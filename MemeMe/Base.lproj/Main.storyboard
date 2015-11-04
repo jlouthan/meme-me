@@ -44,14 +44,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vki-Yl-JAz">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vki-Yl-JAz">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <animations/>
                                 <items>
-                                    <navigationItem title="Title" id="6bb-ku-VpR">
+                                    <navigationItem id="6bb-ku-VpR">
                                         <barButtonItem key="leftBarButtonItem" title="Share" id="hGI-hs-4nX">
                                             <connections>
                                                 <action selector="share:" destination="BYZ-38-t0r" id="80u-YL-4pM"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="y1j-kC-8ia">
+                                            <connections>
+                                                <action selector="cancel:" destination="BYZ-38-t0r" id="xsy-EP-ITq"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -71,13 +76,16 @@
                             <constraint firstItem="VSj-zJ-UfJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="6lT-Ob-IGx"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oaQ-0O-ufu" secondAttribute="bottom" id="Ftc-rN-93j"/>
                             <constraint firstItem="oaQ-0O-ufu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="VcQ-HQ-7QL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vki-Yl-JAz" secondAttribute="trailing" constant="-20" id="XTP-0b-3Sy"/>
                             <constraint firstItem="VKT-Ct-2iV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Xs5-sC-cNH"/>
                             <constraint firstItem="VSj-zJ-UfJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fTc-3f-HPJ"/>
+                            <constraint firstItem="Vki-Yl-JAz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="fas-iM-6PG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VSj-zJ-UfJ" secondAttribute="trailing" constant="-20" id="gSG-vV-PNn"/>
                             <constraint firstItem="Vt3-QQ-jnT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="i8x-HR-Ond"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VKT-Ct-2iV" secondAttribute="trailing" constant="-20" id="j5p-dZ-qXT"/>
                             <constraint firstItem="Vt3-QQ-jnT" firstAttribute="top" secondItem="VSj-zJ-UfJ" secondAttribute="bottom" constant="-60" id="kDl-jW-Bff"/>
                             <constraint firstItem="VSj-zJ-UfJ" firstAttribute="top" secondItem="VKT-Ct-2iV" secondAttribute="bottom" constant="-82" id="p0z-jm-J7I"/>
+                            <constraint firstItem="Vki-Yl-JAz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="qfs-ZU-KLI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Vt3-QQ-jnT" secondAttribute="trailing" constant="-20" id="uSn-3F-WRT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oaQ-0O-ufu" secondAttribute="trailing" constant="-20" id="wX6-Ux-ssK"/>
                         </constraints>

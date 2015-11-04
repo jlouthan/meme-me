@@ -33,9 +33,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        styleTextViews()
-        
-//        TODO maybe move this into delegate class?
+        self.styleTextViews()
+        self.setToLaunchState()
         self.topMemeText.delegate = self
         self.bottomMemeText.delegate = self
     }
@@ -49,8 +48,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             NSStrokeWidthAttributeName: -3.0
         ]
         
-        self.topMemeText.text = "TOP"
-        self.bottomMemeText.text = "BOTTOM"
         self.topMemeText.defaultTextAttributes = memeTextAttributes
         self.bottomMemeText.defaultTextAttributes = memeTextAttributes
         self.topMemeText.borderStyle = UITextBorderStyle.None
@@ -58,6 +55,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.topMemeText.textAlignment = NSTextAlignment.Center
         self.bottomMemeText.textAlignment = NSTextAlignment.Center
     }
+    
+//    choose image
     
     func presentImagePickerWithSourceType(type: UIImagePickerControllerSourceType) {
         let controller = UIImagePickerController()
@@ -107,6 +106,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         
         self.presentViewController(controller, animated: true, completion: nil)
+    }
+    
+//    cancel
+    
+    func setToLaunchState() {
+        self.topMemeText.text = "TOP"
+        self.bottomMemeText.text = "BOTTOM"
+        self.memeImage.image = nil
+    }
+    
+    @IBAction func cancel(sender: UIBarButtonItem) {
+        setToLaunchState()
     }
     
     //    image picker delegate
