@@ -21,6 +21,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var toolbar: UIToolbar!
     
+    var normalOriginY: CGFloat!
+    
     override func viewWillAppear(animated: Bool) {
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         shareButton.enabled = (memeImage.image != nil)
@@ -33,6 +35,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        store this to prevent keyboard from pushing view up too high if user switch directly from one textfield to another
+        self.normalOriginY = self.view.frame.origin.y
         self.styleTextViews()
         self.setToLaunchState()
         self.topMemeText.delegate = self
@@ -156,7 +160,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func keyboardWillShow(notification: NSNotification) {
-        self.view.frame.origin.y -= getKeyboardHeight(notification)
+        self.view.frame.origin.y = self.normalOriginY - getKeyboardHeight(notification)
     }
     
     func keyboardWillHide(notification: NSNotification) {
