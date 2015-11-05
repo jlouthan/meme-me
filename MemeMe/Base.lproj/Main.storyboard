@@ -41,13 +41,13 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vt3-QQ-jnT">
-                                <rect key="frame" x="0.0" y="496" width="600" height="30"/>
+                                <rect key="frame" x="10" y="484" width="580" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vki-Yl-JAz">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
@@ -66,7 +66,7 @@
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VKT-Ct-2iV">
-                                <rect key="frame" x="0.0" y="74" width="600" height="30"/>
+                                <rect key="frame" x="10" y="86" width="580" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -76,23 +76,24 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="oaQ-0O-ufu" firstAttribute="top" secondItem="VSj-zJ-UfJ" secondAttribute="bottom" id="0ht-3c-0k4"/>
-                            <constraint firstItem="VSj-zJ-UfJ" firstAttribute="top" secondItem="Vki-Yl-JAz" secondAttribute="bottom" id="31A-83-VBn"/>
                             <constraint firstItem="VSj-zJ-UfJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="6lT-Ob-IGx"/>
+                            <constraint firstItem="VSj-zJ-UfJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="8Xf-IP-EBC"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oaQ-0O-ufu" secondAttribute="bottom" id="Ftc-rN-93j"/>
-                            <constraint firstItem="VSj-zJ-UfJ" firstAttribute="top" secondItem="VKT-Ct-2iV" secondAttribute="bottom" constant="-60" id="RR0-3O-Kid"/>
+                            <constraint firstItem="Vki-Yl-JAz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="PP4-EA-37V"/>
+                            <constraint firstItem="VSj-zJ-UfJ" firstAttribute="top" secondItem="VKT-Ct-2iV" secondAttribute="bottom" constant="-72" id="RR0-3O-Kid"/>
                             <constraint firstItem="oaQ-0O-ufu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="VcQ-HQ-7QL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Vki-Yl-JAz" secondAttribute="trailing" constant="-20" id="XTP-0b-3Sy"/>
-                            <constraint firstItem="VKT-Ct-2iV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Xs5-sC-cNH"/>
-                            <constraint firstItem="Vki-Yl-JAz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="fas-iM-6PG"/>
+                            <constraint firstItem="VKT-Ct-2iV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="Xs5-sC-cNH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VSj-zJ-UfJ" secondAttribute="trailing" constant="-20" id="gSG-vV-PNn"/>
-                            <constraint firstItem="Vt3-QQ-jnT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="i8x-HR-Ond"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VKT-Ct-2iV" secondAttribute="trailing" constant="-20" id="j5p-dZ-qXT"/>
-                            <constraint firstItem="Vt3-QQ-jnT" firstAttribute="top" secondItem="VSj-zJ-UfJ" secondAttribute="bottom" constant="-60" id="kDl-jW-Bff"/>
+                            <constraint firstItem="Vt3-QQ-jnT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="i8x-HR-Ond"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VKT-Ct-2iV" secondAttribute="trailing" constant="-10" id="j5p-dZ-qXT"/>
+                            <constraint firstItem="Vt3-QQ-jnT" firstAttribute="top" secondItem="VSj-zJ-UfJ" secondAttribute="bottom" constant="-72" id="kDl-jW-Bff"/>
                             <constraint firstItem="Vki-Yl-JAz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="qfs-ZU-KLI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Vt3-QQ-jnT" secondAttribute="trailing" constant="-20" id="uSn-3F-WRT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vt3-QQ-jnT" secondAttribute="trailing" constant="-10" id="uSn-3F-WRT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oaQ-0O-ufu" secondAttribute="trailing" constant="-20" id="wX6-Ux-ssK"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
                         <outlet property="bottomMemeText" destination="Vt3-QQ-jnT" id="nSd-Xv-BeR"/>
                         <outlet property="cameraButton" destination="q5X-b4-zmT" id="04b-yp-OwZ"/>
