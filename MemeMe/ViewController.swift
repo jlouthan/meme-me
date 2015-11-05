@@ -118,6 +118,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.topMemeText.text = "TOP"
         self.bottomMemeText.text = "BOTTOM"
         self.memeImage.image = nil
+        shareButton.enabled = false
     }
     
     @IBAction func cancel(sender: UIBarButtonItem) {
