@@ -43,6 +43,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.bottomMemeText.delegate = self
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     func styleTextViews() {
         
         let memeTextAttributes = [
