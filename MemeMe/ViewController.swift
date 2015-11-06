@@ -37,13 +37,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
 //        store this to prevent keyboard from pushing view up too high if user switch directly from one textfield to another
         self.normalOriginY = self.view.frame.origin.y
-        self.styleTextViews()
+        self.styleTextField(topMemeText)
+        styleTextField(bottomMemeText)
         self.setToLaunchState()
         self.topMemeText.delegate = self
         self.bottomMemeText.delegate = self
     }
     
-    func styleTextViews() {
+    func styleTextField(textField: UITextField) {
         
         let memeTextAttributes = [
             NSStrokeColorAttributeName: UIColor.blackColor(),
@@ -52,12 +53,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             NSStrokeWidthAttributeName: -3.0
         ]
         
-        self.topMemeText.defaultTextAttributes = memeTextAttributes
-        self.bottomMemeText.defaultTextAttributes = memeTextAttributes
-        self.topMemeText.borderStyle = UITextBorderStyle.None
-        self.bottomMemeText.borderStyle = UITextBorderStyle.None
-        self.topMemeText.textAlignment = NSTextAlignment.Center
-        self.bottomMemeText.textAlignment = NSTextAlignment.Center
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.borderStyle = UITextBorderStyle.None
+        textField.textAlignment = NSTextAlignment.Center
     }
     
 //    choose image
