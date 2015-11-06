@@ -35,7 +35,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        store this to prevent keyboard from pushing view up too high if user switch directly from one textfield to another
+//        store this to ensure view returns to original position (first responder not guranteed when hiding keyboard)
         normalOriginY = view.frame.origin.y
         styleTextField(topMemeText)
         styleTextField(bottomMemeText)
@@ -162,14 +162,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func keyboardWillShow(notification: NSNotification) {
         if bottomMemeText.isFirstResponder() {
-            view.frame.origin.y = normalOriginY - getKeyboardHeight(notification)
+            view.frame.origin.y -= getKeyboardHeight(notification)
         }
     }
     
     func keyboardWillHide(notification: NSNotification) {
-        if bottomMemeText.isFirstResponder() {
-            view.frame.origin.y += getKeyboardHeight(notification)
-        }
+        view.frame.origin.y = normalOriginY
     }
     
     func subscribeToKeyboardNotifications() {
