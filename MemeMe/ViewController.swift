@@ -161,11 +161,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func keyboardWillShow(notification: NSNotification) {
-        view.frame.origin.y = normalOriginY - getKeyboardHeight(notification)
+        if bottomMemeText.isFirstResponder() {
+            view.frame.origin.y = normalOriginY - getKeyboardHeight(notification)
+        }
     }
     
     func keyboardWillHide(notification: NSNotification) {
-        view.frame.origin.y += getKeyboardHeight(notification)
+        if bottomMemeText.isFirstResponder() {
+            view.frame.origin.y += getKeyboardHeight(notification)
+        }
     }
     
     func subscribeToKeyboardNotifications() {
