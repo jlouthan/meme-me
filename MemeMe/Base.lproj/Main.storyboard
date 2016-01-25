@@ -120,28 +120,67 @@
         <!--Sent Memes-->
         <scene sceneID="QJm-VH-A5U">
             <objects>
-                <collectionViewController id="e8W-2L-oFT" sceneMemberID="viewController">
+                <collectionViewController id="e8W-2L-oFT" customClass="SentMemeCollectionViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="XLW-gw-Z56">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mar-W5-w4u">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="80" height="80"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jpT-Gw-Buk">
-                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionViewCell" id="jpT-Gw-Buk" customClass="MemeCollectionViewCell" customModule="MemeMe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6JN-If-wia">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="45r-8e-GmZ"/>
+                                                <constraint firstAttribute="width" constant="80" id="U1X-vo-WZD"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCq-lu-Sep">
+                                            <rect key="frame" x="19" y="8" width="42" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6N-Lj-aNd">
+                                            <rect key="frame" x="19" y="51" width="42" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstItem="gCq-lu-Sep" firstAttribute="centerX" secondItem="6JN-If-wia" secondAttribute="centerX" id="KKT-81-Mjb"/>
+                                    <constraint firstItem="6JN-If-wia" firstAttribute="leading" secondItem="jpT-Gw-Buk" secondAttribute="leadingMargin" constant="-8" id="KNO-BJ-Mib"/>
+                                    <constraint firstItem="B6N-Lj-aNd" firstAttribute="top" secondItem="6JN-If-wia" secondAttribute="bottom" constant="-29" id="NBF-hd-Koe"/>
+                                    <constraint firstItem="6JN-If-wia" firstAttribute="top" secondItem="jpT-Gw-Buk" secondAttribute="topMargin" constant="-8" id="Vp3-xE-LXI"/>
+                                    <constraint firstItem="6JN-If-wia" firstAttribute="top" secondItem="gCq-lu-Sep" secondAttribute="bottom" constant="-29" id="gPK-TP-rPf"/>
+                                    <constraint firstItem="B6N-Lj-aNd" firstAttribute="centerX" secondItem="6JN-If-wia" secondAttribute="centerX" id="lof-su-8MT"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="6JN-If-wia" secondAttribute="trailing" constant="-8" id="nAj-eI-n0W"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="6JN-If-wia" secondAttribute="bottom" constant="-8" id="ttj-v0-x5Z"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="bottomLabel" destination="B6N-Lj-aNd" id="ETK-ne-kWN"/>
+                                    <outlet property="imageView" destination="6JN-If-wia" id="gSE-ae-QRE"/>
+                                    <outlet property="topLabel" destination="gCq-lu-Sep" id="qTa-It-idr"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -156,6 +195,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="flowLayout" destination="Mar-W5-w4u" id="pnA-Zz-Abe"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRV-4B-SzC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -299,6 +341,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="s9p-lf-kSh"/>
+        <segue reference="o6x-pN-oyu"/>
     </inferredMetricsTieBreakers>
 </document>
