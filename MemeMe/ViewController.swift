@@ -109,8 +109,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         controller.completionWithItemsHandler = { activity, success, items, error in
             if success {
                 self.saveMeme(memedImage)
+                self.dismissViewControllerAnimated(true, completion: nil)
             }
-            self.dismissViewControllerAnimated(true, completion: nil)
         }
         
         presentViewController(controller, animated: true, completion: nil)
@@ -126,7 +126,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func cancel(sender: UIBarButtonItem) {
-//        setToLaunchState()
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
