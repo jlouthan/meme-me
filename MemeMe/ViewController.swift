@@ -126,7 +126,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func cancel(sender: UIBarButtonItem) {
-        setToLaunchState()
+//        setToLaunchState()
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     //    image picker delegate
