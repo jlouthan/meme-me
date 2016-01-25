@@ -25,11 +25,11 @@
             </objects>
             <point key="canvasLocation" x="-404" y="-223"/>
         </scene>
-        <!--Table-->
+        <!--Navigation Controller-->
         <scene sceneID="qSu-Wv-n20">
             <objects>
                 <navigationController id="Fjd-hO-NIJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Table" id="02X-fK-y3b"/>
+                    <tabBarItem key="tabBarItem" title="" image="Table" id="02X-fK-y3b"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ttS-UJ-csy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -105,11 +105,11 @@
             </objects>
             <point key="canvasLocation" x="1190" y="-886"/>
         </scene>
-        <!--Collection-->
+        <!--Navigation Controller-->
         <scene sceneID="8WY-An-TC2">
             <objects>
                 <navigationController id="o60-Sr-iaT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Collection" id="nUE-7n-i3p"/>
+                    <tabBarItem key="tabBarItem" title="" image="Collection" id="nUE-7n-i3p"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qz6-tU-cCv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -148,10 +148,6 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6JN-If-wia">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="80" id="45r-8e-GmZ"/>
-                                                <constraint firstAttribute="width" constant="80" id="U1X-vo-WZD"/>
-                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCq-lu-Sep">
                                             <rect key="frame" x="19" y="8" width="42" height="21"/>
@@ -346,7 +342,11 @@
             <point key="canvasLocation" x="1912" y="-409"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Collection" width="30" height="30"/>
+        <image name="Table" width="30" height="30"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="s9p-lf-kSh"/>
+        <segue reference="o6x-pN-oyu"/>
     </inferredMetricsTieBreakers>
 </document>
