@@ -161,6 +161,40 @@
             </objects>
             <point key="canvasLocation" x="1150" y="235"/>
         </scene>
+        <!--Meme Detail View Controller-->
+        <scene sceneID="F2O-JI-FhN">
+            <objects>
+                <viewController storyboardIdentifier="MemeDetailViewController" id="zsQ-4N-EnF" customClass="MemeDetailViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WKk-Vl-Yoq"/>
+                        <viewControllerLayoutGuide type="bottom" id="aqc-4K-eF5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="age-uJ-JlR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FBa-wi-Kxq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FBa-wi-Kxq" firstAttribute="top" secondItem="age-uJ-JlR" secondAttribute="topMargin" id="1yp-5D-aSg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FBa-wi-Kxq" secondAttribute="trailing" constant="-20" id="8Ki-4J-3Hj"/>
+                            <constraint firstItem="FBa-wi-Kxq" firstAttribute="leading" secondItem="age-uJ-JlR" secondAttribute="leadingMargin" constant="-20" id="igf-UK-T9w"/>
+                            <constraint firstItem="aqc-4K-eF5" firstAttribute="top" secondItem="FBa-wi-Kxq" secondAttribute="bottom" id="isL-Q7-jfc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="FBa-wi-Kxq" id="iDJ-lJ-KEH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yKb-Oi-M1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2056" y="-1219"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
