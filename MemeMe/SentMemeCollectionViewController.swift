@@ -23,21 +23,21 @@ class SentMemeCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let portraitWidth = min(self.view.frame.width, self.view.frame.height)
+        let portraitWidth = min(view.frame.width, view.frame.height)
         let width = (portraitWidth - ((numInRowPortrait - 1) * spacePortrait)) / numInRowPortrait
         
-        let landscapeWidth = max(self.view.frame.width, self.view.frame.height)
+        let landscapeWidth = max(view.frame.width, view.frame.height)
         let extraSpaceLandscape = landscapeWidth % width
         let n = floor(landscapeWidth / width)
         spaceLandscape = extraSpaceLandscape / (n - 1)
         
-        adjustFlowLayoutSpacing(self.view.frame.size)
+        adjustFlowLayoutSpacing(view.frame.size)
         flowLayout.itemSize = CGSizeMake(width, width)
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.collectionView?.reloadData()
+        collectionView?.reloadData()
     }
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
@@ -75,9 +75,9 @@ class SentMemeCollectionViewController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath)
     {
         
-        let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
+        let detailController = storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
         detailController.meme = memes[indexPath.row]
-        self.navigationController!.pushViewController(detailController, animated: true)
+        navigationController!.pushViewController(detailController, animated: true)
         
     }
 }
